@@ -6,7 +6,7 @@ import Layout from "../Layout/Layout";
 const Home = () => {
   return (
     <>
-      <Layout title={"HomePage Purohit-KhanaKhazana"}>
+      <Layout title={"Purohit Khana Khazana"}>
         <div>
           <section id="hero" className="hero section light-background">
             <div className="container">

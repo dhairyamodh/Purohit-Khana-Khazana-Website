@@ -5,7 +5,7 @@ import Layout from "../Layout/Layout";
 const Contact = () => {
   return (
     <>
-      <Layout title={"Contact Purohit-KhanaKhazana"}>
+      <Layout title={"Contact | Purohit Khana Khazana"}>
         <section id="contact" className="contact section">
           {/* Section Title */}
           <div className="container section-title">

@@ -22,7 +22,7 @@ const RailwayMenu = () => {
   }, []);
   return (
     <>
-      <Layout title={"RailwayMenu Purohit-KhanaKhazana"}>
+      <Layout title={"Railway Menu | Purohit Khana Khazana"}>
         <div className="container">
           {/* <h1 style={{ color: "red" }}>Our Menu</h1> */}
           <p>
