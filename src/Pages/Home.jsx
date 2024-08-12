@@ -30,7 +30,7 @@ const Home = () => {
                   <img
                     src="assets/img/menu/menu-item-1.png"
                     className="img-fluid animated"
-                    alt
+                    alt=""
                   />
                 </div>
               </div>
@@ -64,7 +64,7 @@ const Home = () => {
                       <img
                         src="assets/img/menu/paneertikka.png"
                         className="menu-img img-fluid"
-                        alt
+                        alt=""
                       />
                     </a>
                     <h4>Paneer Tikka Masala</h4>
@@ -82,7 +82,7 @@ const Home = () => {
                       <img
                         src="assets/img/menu/chana-masala.png"
                         className="menu-img img-fluid"
-                        alt
+                        alt=""
                       />
                     </a>
                     <h4>Chana Masala</h4>
@@ -100,7 +100,7 @@ const Home = () => {
                       <img
                         src="assets/img/menu/vegJaipuri.png"
                         className="menu-img img-fluid"
-                        alt
+                        alt=""
                       />
                     </a>
                     <h4>Veg Jaipuri</h4>
@@ -115,7 +115,7 @@ const Home = () => {
                       <img
                         src="assets/img/menu/dalfry.png"
                         className="menu-img img-fluid"
-                        alt
+                        alt=""
                       />
                     </a>
                     <h4>Dal Fry</h4>
@@ -182,7 +182,8 @@ const Home = () => {
                             <p>
                               <i className="bi bi-quote quote-icon-left" />
                               <span>
-                                Nice Taste I will Come Again,Thank You Purohit KhanaKhazana
+                                Nice Taste I will Come Again,Thank You Purohit
+                                KhanaKhazana
                               </span>
                               <i className="bi bi-quote quote-icon-right" />
                             </p>
@@ -202,7 +203,8 @@ const Home = () => {
                             <p>
                               <i className="bi bi-quote quote-icon-left" />
                               <span>
-                              The food was so delicious and the service was really great, too!
+                                The food was so delicious and the service was
+                                really great, too!
                               </span>
                               <i className="bi bi-quote quote-icon-right" />
                             </p>

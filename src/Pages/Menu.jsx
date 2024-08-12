@@ -31,7 +31,7 @@ const Menu = () => {
                       <img
                         src="assets/img/menu/paneertikka.png"
                         className="menu-img img-fluid"
-                        alt
+                        alt=""
                       />
                     </a>
                     <h4>Paneer Tikka Masala</h4>
@@ -49,7 +49,7 @@ const Menu = () => {
                       <img
                         src="assets/img/menu/chana-masala.png"
                         className="menu-img img-fluid"
-                        alt
+                        alt=""
                       />
                     </a>
                     <h4>Chana Masala</h4>
@@ -67,7 +67,7 @@ const Menu = () => {
                       <img
                         src="assets/img/menu/vegJaipuri.png"
                         className="menu-img img-fluid"
-                        alt
+                        alt=""
                       />
                     </a>
                     <h4>Veg Jaipuri</h4>
@@ -82,7 +82,7 @@ const Menu = () => {
                       <img
                         src="assets/img/menu/dalfry.png"
                         className="menu-img img-fluid"
-                        alt
+                        alt=""
                       />
                     </a>
                     <h4>Dal Fry</h4>
