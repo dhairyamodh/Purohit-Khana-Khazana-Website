@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.purohitkhanakhazana.in/</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Us Page -->
+  <url>
+    <loc>https://www.purohitkhanakhazana.in/aboutus</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.purohitkhanakhazana.in/contact</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Menu Page -->
+  <url>
+    <loc>https://www.purohitkhanakhazana.in/menu</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Pickup Menu Page -->
+  <url>
+    <loc>https://www.purohitkhanakhazana.in/pickup-menu</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Railway Menu Page -->
+  <url>
+    <loc>https://www.purohitkhanakhazana.in/railway-menu</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy Page -->
+  <url>
+    <loc>https://www.purohitkhanakhazana.in/privacy-policy</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

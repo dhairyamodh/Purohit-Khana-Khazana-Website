@@ -71,66 +71,66 @@ const PickupDashboard = () => {
   };
 
   return (
-    <Layout title={"PickUpDashboard Purohit-KhanaKhazana"}>
-    <div className="container">
-      <h1>Pickup Items</h1>
-      <button className="btn btn-primary" onClick={() => openModal()}>
-        Add Pickup Item
-      </button>
-      <table className="table mt-3">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Price</th>
-            <th>Type</th>
-            <th>Weight</th>
-            <th>Description</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {pickupItems.map((item) => (
-            <tr key={item.id}>
-              <td>{item.itemName}</td>
-              <td>{item.price}</td>
-              <td>{item.type}</td>
-              <td>{item.weight}</td>
-              <td>{item.description}</td>
-              <td>
-                <button
-                  className="btn btn-warning btn-md m-2"
-                  onClick={() => openModal(item)}
-                >
-                  Edit
-                </button>
-                <button
-                  className="btn btn-danger btn-md ml-2"
-                  onClick={() => handleDelete(item.id)}
-                >
-                  Delete
-                </button>
-              </td>
+    <Layout title={"PickUpDashboard Purohit Khana Khazana"}>
+      <div className="container">
+        <h1>Pickup Items</h1>
+        <button className="btn btn-primary" onClick={() => openModal()}>
+          Add Pickup Item
+        </button>
+        <table className="table mt-3">
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Price</th>
+              <th>Type</th>
+              <th>Weight</th>
+              <th>Description</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <Link to="/purohit/admin" className="btn btn-outline-primary">
-        Back
-      </Link>
+          </thead>
+          <tbody>
+            {pickupItems.map((item) => (
+              <tr key={item.id}>
+                <td>{item.itemName}</td>
+                <td>{item.price}</td>
+                <td>{item.type}</td>
+                <td>{item.weight}</td>
+                <td>{item.description}</td>
+                <td>
+                  <button
+                    className="btn btn-warning btn-md m-2"
+                    onClick={() => openModal(item)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="btn btn-danger btn-md ml-2"
+                    onClick={() => handleDelete(item.id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <Link to="/purohit/admin" className="btn btn-outline-primary">
+          Back
+        </Link>
 
-      <Modal
-        isOpen={modalOpen}
-        onClose={closeModal}
-        onSubmit={(item) => {
-          if (modalData && modalData.id) {
-            handleUpdate(modalData.id, item);
-          } else {
-            handleAdd(item);
-          }
-        }}
-        initialItem={modalData}
-      />
-    </div>
+        <Modal
+          isOpen={modalOpen}
+          onClose={closeModal}
+          onSubmit={(item) => {
+            if (modalData && modalData.id) {
+              handleUpdate(modalData.id, item);
+            } else {
+              handleAdd(item);
+            }
+          }}
+          initialItem={modalData}
+        />
+      </div>
     </Layout>
   );
 };

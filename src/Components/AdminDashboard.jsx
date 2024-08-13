@@ -5,7 +5,7 @@ import Layout from "../Layout/Layout";
 
 const AdminDashboard = () => {
   return (
-    <Layout title={"AdminPage Purohit-KhanaKhazana"}>
+    <Layout title={"AdminPage Purohit Khana Khazana"}>
       <div className="mt-5">
         <h1>Admin Dashboard</h1>
         <h2>Add Items</h2>

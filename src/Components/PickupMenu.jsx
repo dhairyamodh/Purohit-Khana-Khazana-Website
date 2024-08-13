@@ -23,7 +23,12 @@ const PickupMenu = () => {
 
   return (
     <>
-      <Layout title={"Pick-Up Menu | Purohit Khana Khazana"}>
+      <Layout
+        title={"Pick-Up Menu | Purohit Khana Khazana"}
+        description={
+          "Browse our special pickup menu at Purohit Khana Khazana. Order your favorite dishes online and pick them up at your convenience, hot and ready to enjoy"
+        }
+      >
         <div className="container">
           {/* <h1 style={{ color: "red" }}>Our Menu</h1> */}
           <p>

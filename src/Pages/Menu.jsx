@@ -9,7 +9,12 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <>
-      <Layout title={"Menu Purohit-KhanaKhazana"}>
+      <Layout
+        title={"Menu Purohit Khana Khazana"}
+        description={
+          "Discover a wide variety of mouth-watering dishes on the Purohit Khana Khazana menu. Enjoy traditional and contemporary cuisine made with the freshest ingredients"
+        }
+      >
         <section id="menu" className="menu section">
           <h1>Our Menu</h1>
           <img src="" alt="" />

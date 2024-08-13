@@ -5,7 +5,12 @@ import Layout from "../Layout/Layout";
 const Contact = () => {
   return (
     <>
-      <Layout title={"Contact | Purohit Khana Khazana"}>
+      <Layout
+        title={"Contact | Purohit Khana Khazana"}
+        description={
+          "Have questions or feedback? Contact Purohit Khana Khazana today. We're here to assist you with your inquiries, orders, and any other needs"
+        }
+      >
         <section id="contact" className="contact section">
           {/* Section Title */}
           <div className="container section-title">

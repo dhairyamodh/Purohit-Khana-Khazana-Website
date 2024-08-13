@@ -6,7 +6,10 @@ import Layout from "../Layout/Layout";
 const Home = () => {
   return (
     <>
-      <Layout title={"Purohit Khana Khazana"}>
+      <Layout
+        title={"Purohit Khana Khazana"}
+        description="Welcome to Purohit Khana Khazana. Discover our delicious dishes and order now!"
+      >
         <div>
           <section id="hero" className="hero section light-background">
             <div className="container">

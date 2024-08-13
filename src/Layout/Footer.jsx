@@ -8,7 +8,7 @@ const Footer = () => {
         <div className=" copyright text-center">
           <p>
             © <span>Copyright</span>{" "}
-            <strong className="px-1 sitename">Purohit-KhanaKhazana</strong>{" "}
+            <strong className="px-1 sitename">Purohit Khana Khazana</strong>{" "}
             <span>All Rights Reserved</span>
           </p>
           <div className="credits">

@@ -5,7 +5,10 @@ import Layout from "../Layout/Layout";
 const Aboutus = () => {
   return (
     <>
-      <Layout title={"About Us | Purohit Khana Khazana"}>
+      <Layout
+        title={"About Us | Purohit Khana Khazana"}
+        description="Learn more about Purohit Khana Khazana, our story, and our commitment to quality food."
+      >
         <section id="about" className="about section">
           {/* Section Title */}
           <h1>About Us</h1>
