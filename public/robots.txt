@@ -1,6 +1,8 @@
 # Allow all bots to crawl the site
 User-agent: *
 Allow: /
+Allow: /favicon.ico
+
 
 # Disallow crawling of the admin dashboard and its subpages
 Disallow: /purohit/admin
@@ -8,4 +10,4 @@ Disallow: /purohit/admin/pickup
 Disallow: /purohit/admin/railway
 
 # Specify the location of the sitemap (if you have one)
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://www.purohitkhanakhazana.in/sitemap.xml
