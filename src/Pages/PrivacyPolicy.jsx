@@ -27,7 +27,7 @@ const styles = {
 const PrivacyPolicy = () => {
   return (
     <Layout
-      title={"PrivacyPolicy Purohit Khana Khazana"}
+      title={"Privacy Policy | Purohit Khana Khazana"}
       description={
         "Review the privacy policy of Purohit Khana Khazana. Learn how we protect your personal information and ensure a secure experience on our website"
       }
