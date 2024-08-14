@@ -97,13 +97,7 @@ const Contact = () => {
               {/* End Info Item */}
             </div>
             <h1 className="m-4">Find Us On Map</h1>
-            <div>
-              <img
-                style={{ height: "150px", width: "150px" }}
-                src="assets/img/QrCode.png"
-                alt=""
-              />
-            </div>
+            
             <div className="mb-5 mt-5">
               <div>
                 <iframe
