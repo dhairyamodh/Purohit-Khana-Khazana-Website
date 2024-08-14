@@ -119,7 +119,7 @@ const RailwayMenu = () => {
           </div>
         </section>
         <section className="container">
-          <div classname="row">
+          <div className="row">
             <div className="card col-sm-4 ">
               <div className="card-body">
                 <strong className="card-title">

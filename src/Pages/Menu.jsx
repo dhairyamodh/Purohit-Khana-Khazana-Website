@@ -107,8 +107,8 @@ const Menu = () => {
           </div>
 
           <div className="container mt-4">
-            <div classname="row">
-              <div className="card col-md-4 ">
+            <div className="row gy-3 gx-3">
+              <div className="card col-lg-4 col-md-6">
                 <div className="card-body">
                   <strong className="card-title">
                     <IoCallOutline size={30} /> Pick up & On the Way Order
@@ -132,7 +132,7 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
-              <div className="card col-md-4">
+              <div className="card col-lg-4 col-md-6">
                 <div className="card-body">
                   <strong className="card-title">
                     <MdOutlineEmail size={30} />
@@ -162,7 +162,7 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
-              <div className="card col-md-4">
+              <div className="card col-lg-4 col-md-6">
                 <div className="card-body">
                   <strong className="card-title">
                     <MdLocationOn size={30} />

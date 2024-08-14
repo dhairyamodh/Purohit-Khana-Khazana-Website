@@ -8,22 +8,17 @@ const Layout = ({ children, title, description }) => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="Food & Drink" />
+        <meta name="author" content="Purohit Khana Khazana" />
         <meta name="description" content={description} />
         <title>{title}</title>
       </Helmet>
       <Navbar />
-      <main style={{ minHeight: "70vh" }}>
-        {children}
-      </main>
+      <main style={{ minHeight: "70vh" }}>{children}</main>
       <Footer />
     </div>
   );
-};
-
-// Default props for title and description
-Layout.defaultProps = {
-  title:"Purohit Khana Khazana",
-  description:"Purohit Khana Khazana offers the best culinary experience. Order now and enjoy delicious meals delivered to your doorstep.",
 };
 
 export default Layout;

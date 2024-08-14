@@ -1,93 +1,96 @@
 /**
-* Template Name: Yummy
-* Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: Yummy
+ * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+ * Updated: Jun 29 2024 with Bootstrap v5.3.3
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
-(function() {
+(function ($) {
   "use strict";
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
   function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    const $body = $("body");
+    const $header = $("#header");
+    if (
+      !$header.hasClass("scroll-up-sticky") &&
+      !$header.hasClass("sticky-top") &&
+      !$header.hasClass("fixed-top")
+    )
+      return;
+    $(window).scrollTop() > 100
+      ? $body.addClass("scrolled")
+      : $body.removeClass("scrolled");
   }
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+  $(document).on("scroll", toggleScrolled);
+  $(window).on("load", toggleScrolled);
 
   /**
    * Mobile nav toggle
    */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+  const $mobileNavToggleBtn = $(".mobile-nav-toggle");
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
+  function mobileNavToggle() {
+    $("body").toggleClass("mobile-nav-active");
+    $mobileNavToggleBtn.toggleClass("bi-list bi-x");
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
+  $(document).on("click", ".mobile-nav-toggle", function () {
+    $("body").toggleClass("mobile-nav-active");
+    $(this).toggleClass("bi-list bi-x");
+  });
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
-
+  $(document).on("click", "#navmenu a", function () {
+    if ($("body").hasClass("mobile-nav-active")) {
+      mobileNavToggle();
+    }
   });
 
   /**
    * Toggle mobile nav dropdowns
    */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
+  $(document).on("click", ".navmenu .toggle-dropdown", function (e) {
+    e.preventDefault();
+    $(this).parent().toggleClass("active");
+    $(this).parent().next().toggleClass("dropdown-active");
+    e.stopImmediatePropagation();
   });
 
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
+  const $preloader = $("#preloader");
+  if ($preloader.length) {
+    $(window).on("load", function () {
+      $preloader.remove();
     });
   }
 
   /**
    * Scroll top button
    */
-  let scrollTop = document.querySelector('.scroll-top');
+  const $scrollTop = $(".scroll-top");
 
   function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+    if ($scrollTop.length) {
+      $(window).scrollTop() > 100
+        ? $scrollTop.addClass("active")
+        : $scrollTop.removeClass("active");
     }
   }
-  scrollTop.addEventListener('click', (e) => {
+  $scrollTop.on("click", function (e) {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    $("html, body").animate({ scrollTop: 0 }, "smooth");
   });
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+  $(window).on("load", toggleScrollTop);
+  $(document).on("scroll", toggleScrollTop);
 
   /**
    * Animation on scroll function and init
@@ -95,18 +98,18 @@
   function aosInit() {
     AOS.init({
       duration: 600,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: true,
-      mirror: false
+      mirror: false,
     });
   }
-  window.addEventListener('load', aosInit);
+  $(window).on("load", aosInit);
 
   /**
    * Initiate glightbox
    */
   const glightbox = GLightbox({
-    selector: '.glightbox'
+    selector: ".glightbox",
   });
 
   /**
@@ -117,35 +120,36 @@
   /**
    * Init swiper sliders
    */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
+  $(document).ready(function () {
+    $(".init-swiper").each(function () {
+      let swiperConfigElement = $(this).find(".swiper-config");
 
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
+      // Check if the element exists before calling trim()
+      if (swiperConfigElement.length > 0) {
+        let config = JSON.parse(swiperConfigElement.html().trim());
+
+        // Your swiper initialization code here
       } else {
-        new Swiper(swiperElement, config);
+        console.log("Swiper config element not found!");
       }
     });
-  }
-
-  window.addEventListener("load", initSwiper);
+  });
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  $(window).on("load", function () {
     if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
+      const $section = $(window.location.hash);
+      if ($section.length) {
         setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
+          const scrollMarginTop = parseInt($section.css("scrollMarginTop"), 10);
+          $("html, body").animate(
+            {
+              scrollTop: $section.offset().top - scrollMarginTop,
+            },
+            "smooth"
+          );
         }, 100);
       }
     }
@@ -154,23 +158,26 @@
   /**
    * Navmenu Scrollspy
    */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
+  const $navmenulinks = $(".navmenu a");
 
   function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
+    $navmenulinks.each(function () {
+      const $navmenulink = $(this);
+      if (!$navmenulink.attr("href").startsWith("#")) return;
+      const $section = $($navmenulink.attr("href"));
+      if (!$section.length) return;
+      const position = $(window).scrollTop() + 200;
+      if (
+        position >= $section.offset().top &&
+        position <= $section.offset().top + $section.outerHeight()
+      ) {
+        $(".navmenu a.active").removeClass("active");
+        $navmenulink.addClass("active");
       } else {
-        navmenulink.classList.remove('active');
+        $navmenulink.removeClass("active");
       }
-    })
+    });
   }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
-
-})();
+  $(window).on("load", navmenuScrollspy);
+  $(document).on("scroll", navmenuScrollspy);
+})(jQuery);

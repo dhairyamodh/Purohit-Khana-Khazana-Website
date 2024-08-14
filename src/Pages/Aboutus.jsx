@@ -17,7 +17,7 @@ const Aboutus = () => {
             <img
               src="assets/img/menu/cover.jpeg"
               alt="cover"
-              className="sitename"
+              className="sitename w-100"
             />
           </div>
         </section>

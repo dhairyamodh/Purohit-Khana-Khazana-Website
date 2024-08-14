@@ -118,7 +118,7 @@ const PickupMenu = () => {
           </div>
         </section>
         <div className="container">
-          <div classname="row">
+          <div className="row">
             <div className="card col-md-4 ">
               <div className="card-body">
                 <strong className="card-title">
