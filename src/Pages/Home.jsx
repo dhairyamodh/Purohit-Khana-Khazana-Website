@@ -139,6 +139,22 @@ const Home = () => {
               </Link>
             </div>
           </div>
+          <div className="container mt-2">
+            <div className="d-flex justify-content-center align items-center flex-column">
+              <h3>DOWNLOAD OUR APP NOW!</h3>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.dhairyamodh.Purohit_Khana_Khazana"
+                target="blank"
+              >
+                <img
+                  src="/assets/img/Playstore.png"
+                  alt="Download Our App"
+                  width="150px"
+                  height="150px"
+                />
+              </a>
+            </div>
+          </div>
           {/* Testimonials Section */}
           <section
             id="testimonials"
