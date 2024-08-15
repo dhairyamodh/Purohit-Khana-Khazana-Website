@@ -97,14 +97,14 @@ const Contact = () => {
               {/* End Info Item */}
             </div>
             <h1 className="m-4">Find Us On Map</h1>
-            
+
             <div className="mb-5 mt-5">
               <div>
                 <iframe
                   title="map"
                   src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d116477.53208860163!2d72.34939843249597!3d24.174437362498423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x395ce91e8666e5a9%3A0x9d17ce9360c25cde!2snear%2C%20Railway%20Station%20Rd%2C%20opp.%20Surya%20hotel%2C%20Bhavnagar%2C%20Chaman%20Bagh%2C%20Palanpur%2C%20Gujarat%20385001!3m2!1d24.174459499999998!2d72.4318!5e0!3m2!1sen!2sin!4v1723096662511!5m2!1sen!2sin"
-                  width={900}
-                  height={500}
+                  width="100%"
+                  height="fixed"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
